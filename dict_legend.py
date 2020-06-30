@@ -19,6 +19,7 @@ dict_var_disp = {
     'Q2': '$Q_2$',
     'UStar':'$U^*$',
     'SMD':'SMD',
+    'U10': 'U10',
     #_r
     'QN_r': '$Q^*$_r',
     'QS_r': '$Q_S$_r',
@@ -80,7 +81,7 @@ list_var_plot = [
     'RH2',
     'T2'
 ]
-dict_var_label = {
+dict_var_ylabel = {
     'QN': 'Flux ($ \mathrm{W \ m^{-2}}$)',
     'QS': 'Flux ($ \mathrm{W \ m^{-2}}$)',
     'QE': 'Flux ($ \mathrm{W \ m^{-2}}$)',
@@ -88,8 +89,25 @@ dict_var_label = {
     'QF': 'Flux ($ \mathrm{W \ m^{-2}}$)',
     'RH2': 'Relative Humidity (%)',
     'T2': 'Air Temperature\n2 magl ($^{\\circ}}$C)',
+    'Q2': 'Specific Humidity (g/$ \mathrm{kg^{-1}}$',
+    'UStar':' ',
+    'RA' : ' ',
+    'SMD':'Soil Moisture Deficit (%)',
+    'U10': 'Wind Speed (m $\mathrm{s^{-1}}$)',
+
 }
 
-
-
-
+dict_var_title = {
+    'QN': 'Net All-Wave Radiation',
+    'QS': 'Storage Heat Flux',
+    'QE': 'Latent Heat Flux',
+    'QH': 'Sensible Heat Flux',
+    'QF': 'Antrophogenic Heat Flux',
+    'RH2': 'Relative Humidity',
+    'T2': 'Air Temperature 2m agl',
+    'Q2': 'Specific Humidity',
+    'UStar':'Friction Velocity',
+    'SMD':'Soil Moisture Deficit',        
+    'U10': 'Wind Speed',
+    'RA' : 'Aerodynamic Restistance'
+}
