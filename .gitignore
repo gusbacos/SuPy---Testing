@@ -1,7 +1,12 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,jupyternotebooks,pycharm,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,jupyternotebooks,pycharm,python
+=======
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,jupyternotebooks,python
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,jupyternotebooks,python
+>>>>>>> 804ac6607b15de8f8f801e3adfe0ecf0c7cf1a72
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
@@ -46,6 +51,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+<<<<<<< HEAD
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -149,6 +155,8 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
 
+=======
+>>>>>>> 804ac6607b15de8f8f801e3adfe0ecf0c7cf1a72
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
