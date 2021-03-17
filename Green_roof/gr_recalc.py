@@ -10,6 +10,7 @@ def gr_recalc(scenario, df_base, df_gr, base_weight, gr_weight):
 
     df_base_init = df_base
     base_soildepth = df_base_init.soildepth[1]
+    base_soilstorecap = df_base_init.soilstorecap[1]
     base_sathydr = df_base_init.sathydraulicconduct[1]
     base_albedo = df_base_init.alb[1] # building Albedo
     base_emissivity = df_base_init.emis[1] # building Emissivity
@@ -22,6 +23,7 @@ def gr_recalc(scenario, df_base, df_gr, base_weight, gr_weight):
     # Green roof from NonVeg
     df_gr_init = df_gr
     gr_soildepth = df_gr_init.soildepth[1]
+    gr_soilstorecap = df_gr_init.soilstorecap[1]
     gr_sathydr = df_gr_init.sathydraulicconduct[1]
     gr_albedo = df_gr_init.alb[1] # building Albedo
     gr_emissivity = df_gr_init.emis[1] # building Emissivity
@@ -31,9 +33,8 @@ def gr_recalc(scenario, df_base, df_gr, base_weight, gr_weight):
     gr_st_min2 = df_gr_init.storedrainprm.iloc[35] # Storage Min2
     gr_st_max = df_gr_init.storedrainprm.iloc[29] # Storage Max
 
-
-    base_list = [base_soildepth,base_sathydr,base_albedo,base_emissivity,base_dr1,base_dr2,base_st_min,base_st_min2,base_st_max]
-    gr_list = [gr_soildepth,gr_sathydr,gr_albedo,gr_emissivity,gr_dr1,gr_dr2,gr_st_min,gr_st_min2,gr_st_max]
+    base_list = [base_soildepth,base_sathydr,base_albedo,base_emissivity,base_dr1,base_dr2,base_st_min,base_st_min2,base_st_max,base_soilstorecap]
+    gr_list = [gr_soildepth,gr_sathydr,gr_albedo,gr_emissivity,gr_dr1,gr_dr2,gr_st_min,gr_st_min2,gr_st_max,gr_soilstorecap]
 
     scenario.soildepth[1]             = gr_calc(base_list[0],gr_list[0], base_weight, gr_weight)
     scenario.sathydraulicconduct[1]   = gr_calc(base_list[1],gr_list[1], base_weight, gr_weight)
@@ -44,5 +45,6 @@ def gr_recalc(scenario, df_base, df_gr, base_weight, gr_weight):
     scenario.storedrainprm.iloc[1]    = gr_calc(base_list[6],gr_list[6], base_weight, gr_weight) # Storage Min
     scenario.storedrainprm.iloc[35]   = gr_calc(base_list[7],gr_list[7], base_weight, gr_weight) # Storage Min2
     scenario.storedrainprm.iloc[29]   = gr_calc(base_list[8],gr_list[8], base_weight, gr_weight) # Storage Max
+    scenario.soilstorecap[1]          = gr_calc(base_list[9],gr_list[9], base_weight, gr_weight) 
 
     return scenario
